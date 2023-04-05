@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>id 선택자</title>
+    <style>
+        /* id1 적용된 요소 스타일 지정 / 각각의 아이디는 본인 하나만 가질수 있음 */
+       /* 배경색 : orange, 글자색 : white */
+       #id1 {
+        background-color: orange;
+        color: white;
+        /* color: white; */
+        /* rgb red, green, blue 0-255 클수록 흰색화 */
+        color: rgb(255, 255, 255);
+        /* 색상을 16진수로 표현 ㄱ */
+        color: #FFFFFF;
+       }
+
+       #id2 {
+        background-color: purple;
+        color: black;
+       }
+
+      
+       .class1 {
+        color: red;
+       }
+       .class2 {
+        background-color:  yellow;
+       }
+
+    </style>
+   
+    </head>
+        <body>
+            <div id = "id1"> 
+                div 태그입니다.
+            </div>
+            <p id = "id2"> 
+                p 태그입니다.
+            </p>
+
+            <div id = "id3" class = "class1 class2">
+                두번째 div 태그입니다.
+            </div>
+            <h2 id = "id4" class = "class2">
+                h2 태그입니다.
+            </h2>
+            <div class = "class1 class2">
+                안녕하세요
+            </div>
+           
+
+        </body>
+
+
+
+    
+    </html>
+    
