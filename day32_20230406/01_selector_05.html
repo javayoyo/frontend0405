@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            color: red;
+        }
+/* 가상선택자 (pseudo selector) : 마우스 올라갔을 때 효과를 줌/
+    hover > a 태그에 마우스가 올라갔을 때 색상 변화 */
+        a:hover {      
+          color: white;
+          background-color: orange;  
+        }
+        div:hover {
+            background-color: pink;
+            color: white;
+        }
+        div p {
+            display: none; /*보여주다> 감추기 실행*/
+        }
+        /*div 에 마우스를 올리면 해당 자손에 대해 적용 */
+        div:hover p {
+            display: block; /*보여주다 > 적용해제 실행(위의 감추기 해제)*/
+        }
+    </style>
+</head>
+<body>
+    <a href = "#"> 링크부분</a>
+    <div>
+        div 입니다.
+        <p>안녕하세요</p>
+    </div>
+    
+</body>
+</html>
