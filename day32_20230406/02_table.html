@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, tr, td, th {
+            border: 1px solid black;
+            /*  border : 선의 두께, 모양, 색상; 구조
+            ㄴ  border 선 ,px 선의 두께, solid 직선(선의 모양)
+                dashed 대시선(점선 유사), dot (점선) */
+
+            border-collapse: collapse;
+            /*ㄴcollapse 선을 합친다 */
+            
+            padding: 10px;
+            /* ㄴ 안쪽 여백을 지정할 때 */
+          
+        }
+        td{
+            text-align: center;
+            /*ㄴ 텍스트 중앙 정렬 */
+        }
+
+        /* 테이블 한줄 생성시 tr 행추가 ,
+        그 테이블 별로 한 칸씩 td 컬럼추가 */
+    </style>
+</head>
+
+<body>
+    
+    <table>
+        
+        <thead>
+            <tr>
+                <th>번호</td>
+                <th>이름</td>
+                <th>특성</td>
+            </tr>
+            
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>피카츄</td>
+                <td>전기</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>파이리</td>
+                <td>불</td>
+            </tr>
+
+
+        </tbody>
+
+    </table>
+    
+</body>
+</html>
