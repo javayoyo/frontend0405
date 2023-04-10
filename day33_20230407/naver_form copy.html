@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        #save_form {
+            width: 600px;
+        }
+    </style>
+
+    <script>
+
+    </script>
+
+</head>
+
+<body>
+    <div class="container text-center mt-5">
+        <h2>NAVER</h2>
+    </div>
+
+    <div id="save_form" class="container">
+        <label for="id">아이디</label>
+        <input type="text" id="id" name="id" class="form-control mb-3">
+
+        <label for="password">비밀번호</label>
+        <input type="password" id="password" name="password" class="form-control mb-3">
+
+        <label for="password_confirm">비밀번호 재확인</label> 
+        <input type="password" id="password_confirm" name="password_confirm" class="form-control mb-3">
+
+
+        <label for="name">이름</label>
+        <input type="text" id="name" name="name" class="form-control mb-3">
+
+
+        <label for="birth_year">생년월일</label>
+
+        <div class="row mb-3">
+            <div class="col">
+                <input type="text" id="birth_year" name="birth_year" class="form-control mb-3" placeholder="년(4자)">
+            </div>
+            <div class="col">
+                <select name="birth_month" id="" class="form-select mb-3">
+                    <option value="">월</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+            </div>
+            <div class="col">
+                <input type="text" id="birth_day" name="birth_day" class="form-control mb-3" placeholder="일"> 
+            </div>
+        </div>
+
+
+
+        <label for="gender">성별</label>
+        <select name="gender" id="gender" class="form-select mb-3">
+            <option value="male">남</option>
+            <option value="female">여</option>
+            <option value="no">선택안함</option>
+
+        </select>
+
+        <label for="mobile">휴대전화</label>
+        <select name="nation_code" id="" class="form-select mb-3">
+            <!-- selected 미리 선택하여 보여주기 기능 -->
+            <option value="82" selected>대한민국 +82</option>
+            <option value="1">미국 +1</option>
+            <option value="33">프랑스 +33</option>
+        </select>
+
+        <!-- grid 는 가로로 12칸 분배 -->
+        <!--g- > 가로로 배치할 숫자를 지정  -->
+        <div class="row g-2">
+            <div class="col-8">
+                <input type="text" id="mobile" name="mobile" class="form-control" placeholder="전화번호 입력">
+            </div>
+            <!-- onclick 속성 : onclick 속성을 적용한 요소(태그)에 'click 이벤트'가 발생하면
+                        실행할 javascript 함수 또는 문법을 지정함
+                        (스크립트는 주로 body
+                        하단에 기재,head 끝나기전 기재도 가능)
+            아래 버튼을 클릭하면 hello 함수 호출 -->
+
+            <!-- btn-blcok , d-grid 버튼이 빈 공간을 꽉 차게 차지하도록 설정 -->
+            <div class="col-4 d-grid">
+                <input type="button" class="btn btn-success btn-block" value="인증번호 받기" onclick="hello()">
+
+            </div>
+        </div>
+        <input type="text" id="mobile_check" class="form-control mt-2" placeholder="인증번호를 입력하세요">
+
+        <div class="row">
+            <div class="col d-grid">
+                <input type="submit" class="btn btn-outline-success btn-block" value="가입하기">
+
+            </div>
+        </div>
+    </div>
+
+</body>
+<!-- script 상 script tyle=text/javascript 포함  -->
+<script>
+    // 기존의 함수 양식 ㄱ (사용가능)
+    // function hello() {
+
+    // }
+
+    // 화살표함수(arrow function)ㄱ (요즘 대세)
+    const hello = () => {
+        console.log("콘솔에 보여집니다.");
+        alert("alert으로 보여집니다.");
+    }
+
+
+
+
+</script>
+
+<!-- 최종 가입을 통해 서버에 보내지 않아도 되는 정보
+비밀번호 재확인, 인증 번호 의 경우는 불필요 -->
+
+</html>
