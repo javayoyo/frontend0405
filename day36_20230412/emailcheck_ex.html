@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+    <h6>이메일</h6>
+    <input type="text" class="form-control" onblur="email_check()" 
+    id="member-email" name="memberEmail">
+    
+    <h6 id="email-result"></h6>
+
+
+</body>
+<script>
+
+
+
+    const email_check = () => {
+        
+        
+        const email = document.getElementById("member-email").value;
+        const emailResult = document.getElementById("email-result");
+       
+
+        if(email.length == 0 ) {
+           emailResult.innerHTML = "필수 입력입니다";
+           emailResult.style.color = "red";
+
+        }else if(email.length > 20 || email.length <5) {
+           emailResult.innerHTML =  "5~20 이내로 입력해주세요";
+           emailResult.style.color = "red";
+        }else if (email.length >=5 && email.length <= 20) {
+            emailResult.innerHTML = "좋아요";
+            emailResult.style.color = "green";
+        }
+    }
+</script>
+
+</html>

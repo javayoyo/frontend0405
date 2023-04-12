@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>계산기</h1>
+
+    number1: <input type="text" id="num1"  > <br>
+    number2: <input type="text" id="num2" > <br>
+    계산결과: <input type="text" id = "result"> <br>
+    
+    <button onclick="cal()">계산</button>
+
+</body>
+
+<script>
+    
+    const cal = () => {
+
+        const num1 = document.getElementById("num1").value;
+        const num2 = document.getElementById("num2");
+        console.log(typeof num1);
+        console.log(typeof num2.value);
+        console.log(num1 + num2.value);
+        const sum = parseInt(num1) + parseInt(num2.value);
+        console.log(sum);
+
+        //값을 가져오기 > 계산결과 칸에 출력
+        //우변 > 값을 가져올때
+        //좌변 > 자바스크립트에 값을 다시 써주고 싶을 때
+        const result = document.getElementById("result");
+        result.value = sum;
+    }
+    //  ㄴ 스트링 타입일 때는 형변환 필요 parseInt
+</script>
+</html>
