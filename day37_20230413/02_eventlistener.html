@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,19 +17,13 @@
 
 </body>
 <script>
-
         const email_check = () => {
 
         const email = document.getElementById("member-email").value;
         const emailResult = document.getElementById("email-result");
 
-
-
          const exp = /^(?=.*[a-z])(?=.*\d)[a-z\d]{8,16}$/;
-            
-
-  
-
+              
         if (email.length == 0) {
             emailResult.innerHTML = "필수 입력입니다";
             emailResult.style.color = "red";
@@ -43,23 +36,9 @@
             emailResult.style.color = "green";
         }
     }
-
-
-
-
-
     const email = document.getElementById("member-email");
     email.addEventListener("blur", email_check);
     // document.getElementById("member-email").addEventListener("blur", email_check);
 
-    
-
-        
-
-
-
-
-
 </script>
-
 </html>
