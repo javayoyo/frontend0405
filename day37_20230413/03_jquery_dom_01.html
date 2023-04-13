@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+<!-- span 인라인 태그 > 인라인상에서 특정 값 지정 활용 시 사용 -->
+    <h2><span>안녕하세요</span></h2>
+    <h2>반갑습니다</h2>
+    <h2>오늘은 월요일</h2>
+    <h2>이제 곧 3시</h2>
+    <h2>두시간 남았네</h2>
+    <h4></h4>
+    
+</body>
+
+<script>
+    // document 값 출력
+    console.log(document);
+    // 현재 문서에 있는 모든 h2 요소 출력
+    console.log(document.getElementsByTagName("h2"));
+    
+    //jquery 사용시
+    console.log("jq h2요소 가져오기", $("h2"));
+    
+    // const h2All = document.getElementsByTagName("h2"); ㄱ
+    const h2All = $("h2");
+
+    console.log(h2All);
+    console.log(h2All.length);
+    console.log(h2All[0]);
+
+    //첫번째 h2 태그의 innerHTML 속성값 출력
+    // innerHTML > 콘솔상에서 보여질 때 html 및 태그 값 전부 콘솔 출력
+    // innerText > 콘솔상에서 text만 보일 수 있도록 함 
+
+    console.log(h2All[0].innerHTML);
+    console.log(h2All[0].innerText);
+
+
+    // 반복문을 활용하여 h2 요소들의 innerText 출력
+
+   for(let i=0; i < h2All.length; i++) {
+    console.log(h2All[i].innerText);
+   }
+
+   // querySelector(css 선택자) : 해당 요소 중 첫번째 것만 가져옴
+   console.log(document.querySelector("h2"));
+   // 해당요소 를 전부 다 가져옴
+   console.log(document.querySelectorAll("h2"));
+   const h2All2 = document.querySelectorAll("h2");
+   for(let i=0; i < h2All2.length; i++) {
+        console.log(h2All2[i].innerText);
+   }
+
+   // 내용이 없는 h4 태그에 텍스트 추가하기
+   // 1. h4 태그 요소 가져오기
+   const h4ele = document.getElementsByTagName("h4");
+   // 2. h4 태그 innerText 값 지정하기
+   h4ele[0].innerText = "이 내용이 화면에 보입니다.";
+
+   document.getElementsByTagName("h4")[0].innerText = "ㅋㅋㅋㅋㅋㅋㅋㅋ";
+
+   // 다큐먼트 우변시에 자바스크립트에서 불러오기, 좌변에는 새로입력하기 출력으로 이해
+
+
+
+</script>
+</html>
