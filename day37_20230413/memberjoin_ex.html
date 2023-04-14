@@ -12,11 +12,21 @@
 
 </head>
 
+<style>
 
+body {
+        height: 100vh;
+        width: 100vw;
+        background-image: url("../images/갱얼.jpg");
+        background-repeat : no-repeat;
+        background-size : cover;
+      }
+</style>
 
 <body>
-    <div class="container text-center mt-5">
-        <h2>회원가입</h2>
+    <div class="container text-center mt-5" >
+        <h2> U・ᴥ・U 회 원 가 입 U・ᴥ・U </h2>
+        
     </div>
     <div id="save_form" class="container">
         <label for="username">회원계정</label>
@@ -30,7 +40,7 @@
 
 
         <label for="password_confirm">비밀번호 확인</label>
-        <input type="text" id="password_confirm" name="password_confirm" class="form-control mb-3"
+        <input type="text" id="password-confirm" name="passwordConfirm" class="form-control mb-3"
             onblur="password_confirm()">
         <h3 id="password-confirm-result"></h3>
 
@@ -39,8 +49,7 @@
         <input type="text" id="name" name="name" class="form-control mb-3" onblur="name_check()">
         <h4 id="name-check-result"></h4>
 
-
-
+        
         <label for="mobile">전화번호</label>
         <select name="service_code" id="" class="form-select mb-2">
             <option value="SKT">SKT</option>
@@ -51,7 +60,7 @@
 
         <div class="row g-2 mb-2">
             <div class="col-8">
-                <input type="text" id="mobile" name="mobile" class="form-control" placeholder="전화번호 입력">
+                <input type="text" id="mobile" name="mobile" class="form-control" placeholder="전화번호 입력" onblur="mobile_check()" >
                 <h5 id="mobile-check-result"></h5>
             </div>
 
@@ -79,11 +88,6 @@
         <input type="text" id="sample6_address" placeholder="주소"><br>
         <input type="text" id="sample6_detailAddress" placeholder="상세주소">
         <input type="text" id="sample6_extraAddress" placeholder="참고항목">
-
-
-
-
-
 
 
 
@@ -129,7 +133,7 @@
         const password = document.getElementById("password").value;
         const passwordResult = document.getElementById("password-check-result");
 
-        const exp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!#$-_])[A-Za-z\d!#$-_]{6,18}$/;
+        const exp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[-_!#$])[A-Za-z\d-_!#$]{6,18}$/;
 
 
         if (password.length == 0) {
@@ -148,6 +152,7 @@
         const Password = document.getElementById("password").value;
         const PasswordConfirm = document.getElementById("password-confirm").value;
         const passwordConfirmResult = document.getElementById("password-confirm-result");
+
         if (Password == PasswordConfirm) {
             passwordConfirmResult.innerHTML = "일치합니다";
             passwordConfirmResult.style.color = "green";
@@ -158,16 +163,42 @@
     }
 
     const name_check = () => {
-
         const name = document.getElementById("name").value;
         const nameResult = document.getElementById("name-check-result");
 
         if (name.length == 0) {
             nameResult.innerHTML = "필수입력입니다";
             nameResult.style.color = "red";
+        } else {
+            nameResult.innerHTML = "좋아요";
+            nameResult.style.color = "green";
         }
 
     }
+
+    const mobile_check = () => {
+
+        const mobile = document.getElementById("mobile").value;
+        const mobileResult = document.getElementById("mobile-check-result");
+
+        const exp = /^\d{3}-\d{4}-\d{4}$/;
+
+            if(!mobile.match(exp)) {
+                 mobileResult.innerHTML = "형식에 맞지 않습니다";
+                 mobileResult.style.color = "red";
+
+            }else {
+                mobileResult.innerHTML = "좋아요";
+                mobileResult.style.color = "green";
+
+            }
+
+
+    }
+
+
+
+
 
     function sample6_execDaumPostcode() {
         new daum.Postcode({
