@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            height: 5000px;
+        }
+        ul {
+            list-style-type: none;
+            overflow: hidden;
+            background-color: blue;
+            color: white;
+        }
+        li {
+            float: left;
+        }
+        li a {
+            display: inline-block;
+            padding: 15px 15px;
+            text-align: center;
+
+            text-decoration: none;
+            color: white;
+        }
+        li a:hover {
+            background-color: red;
+        }
+        .nav {
+            border: 3px solid black;
+            float: left;
+            width: 30%;
+            height: 400px;
+        }
+        .section {
+            border: 3px solid black;
+            float: left;
+            width: 70%;
+            height: 400px;
+        }
+        .main::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .footer {
+            background-color: yellow;
+            border: 1px solid black;
+        }
+      
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">회원가입</a>
+            </li>
+            <li>
+                <a href="#">로그인</a>
+            </li>
+            <li>
+                <a href="#">Contact Me</a>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="main">
+            <div class="nav">
+                <h2>nav 영역</h2>
+            </div>
+            <div class="section">
+                <h2>section 영역</h2>
+                <div id="save_form" class="container" style="text-align: center;">
+                    <input type="text" id="email" name="email" placeholder="이메일" style="margin: 20px;"> <br>
+                    <input type="text" id="password" name="password" placeholder="비밀번호" style="margin: 20px;"> <br>
+                    <input type="text" id="name" name="name" placeholder="이름" style="margin: 20px;"> <br>
+                    <input type="text" id="mobile" name="mobile" placeholder="전화번호" style="margin: 20px;"> <br>
+                    <button>가입</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <h2>footer 영역</h2>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    아이디: <input type="text" id="id" onblur="id_check()"> <br>
+    <h6 id = "idResult"> </h6>
+
+    비밀번호: <input type="text" id="password" onblur="password()"> <br>
+    <h6 id = "passwordResult"></h6>
+
+    비밀번호 확인: <input type="text" id="password-check" onblur="password_check()"> <br>
+    <h6 id = "password-check-result"></h6>
+   
+
+ 
+
+</body>
+
+<script>
+
+const id_check = () => {
+        const id = document.getElementById("id").value;
+        const idresult = document.getElementById("idResult");
+
+        
+        const exp = /^(?=.*[a-z])(?=.*\d)[a-z\d]{6,10}$/;
+       
+        
+        
+        if(id.match(exp)) {
+            idresult.innerHTML = "일치합니다";
+            passwordResult.style.color = "green";
+        }else {
+            idresult.innerHTML = "올바른 형식이 아닙니다";
+            idResult.style.color = "red";
+            
+        }
+
+    }
+
+    const password = () => {
+        const password = document.getElementById("password").value;
+        const passwordresult = document.getElementById("passwordResult");
+
+        
+        const exp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!#$])[A-Za-z\d!#$]{8,16}$/;
+       
+        
+        if(password.match(exp)) {
+            passwordresult.innerHTML = "일치합니다";
+            passwordResult.style.color = "green";
+
+        }else {
+            passwordresult.innerHTML = "올바른 형식이 아닙니다";
+            passwordResult.style.color = "red";
+            
+        }
+
+    }
+
+    const password_check = () => {
+        const password = document.getElementById("password").value;
+        const passwordcheck = document.getElementById("password-check").value;
+        const passwordcheckResult = document.getElementById("password-check-result");
+        if(password == passwordcheck) {
+            passwordcheckResult.innerHTML = "일치합니다";
+            passwordcheckResult.style.color = "green";   
+                       
+        } else {
+            passwordcheckResult.innerHTML = "일치하지 않습니다";
+            passwordcheckResult.style.color = "red";   
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>
